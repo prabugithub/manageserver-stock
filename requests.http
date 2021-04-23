@@ -1,0 +1,37 @@
+
+## login user
+POST http://localhost:8080/login
+Content-Type: "application/json" 
+
+
+{
+    "username": "prabhu",
+    "password": "test"
+}
+########### get user by id
+
+GET http://localhost:8080/user?userid=234wedsewrte
+Authorization: 61x3531bfx6
+
+########### name filter
+
+GET http://localhost:8080/user?name=v
+Authorization: 61x3531bfx6
+
+########### delete user
+
+DELETE  http://localhost:8080/user?userid=234wedsewrte
+Authorization: 6egmr11t3rf
+
+###### put user
+PUT http://localhost:8080/user
+Authorization: 3l0rq25btwk
+Content-Type: "application/json" 
+
+{
+    "name": "warsh",
+    "age": 32,
+    "email": "abc@abc.co",
+    "workingPosition": "Expert"
+  
+}

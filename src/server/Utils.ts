@@ -1,0 +1,23 @@
+import { stringify } from "node:querystring";
+import { UrlWithParsedQuery, UrlWithStringQuery } from "node:url";
+import { parse } from "url";
+
+export class Utils {
+    public static getUrlBasePath(url: string | undefined) : string {
+        if(url) {
+            const parsedUrl = parse(url);
+            return parsedUrl.pathname!.split('/')[1];
+        } else {
+            return '';
+        }
+
+    }
+
+    public static getQueryParamFromUrl(url: string | undefined) : UrlWithParsedQuery | undefined {
+        if (url) {
+            return parse(url, true);
+        } else {
+            return undefined;
+        }
+    }
+}
